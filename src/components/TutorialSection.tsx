@@ -4,8 +4,7 @@ import * as Prism from "prismjs";
 import "prismjs/themes/prism.css";
 import "prismjs/components/prism-csharp"; // Import C# syntax highlighting
 import Link from "next/link";
-import DownloadLinkProps from "./DownloadLink";
-import { Roboto } from "next/font/google";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 export type TutorialSeriesItem = {
@@ -60,7 +59,7 @@ function saveProgress(storageKey: string, currentHref: string, checked: boolean[
     if (saved) {
       setChecked(JSON.parse(saved));
     }
-  }, [currentHref]);
+  }, [storageKey, currentHref]);
 
 useEffect(() => {
   if (allDone) {
@@ -102,7 +101,6 @@ useEffect(() => {
 
   // Handler for the final checkbox
    const handleAllDoneCheck = () => {
-    const allChecked = checked.every(Boolean);
     if (allDone) {
       setShowResetConfirm(true); // Show custom popup
     } else {
@@ -210,7 +208,7 @@ useEffect(() => {
                       e.currentTarget.style.color = "#1e40af";
                     }}
                   >{
-                    <img
+                    <Image
                       src="/file.svg"
                       alt={dl.label}
                       width={20}
@@ -264,11 +262,10 @@ useEffect(() => {
         </div>
 <nav>
   {tutorialSeries.map((item, idx) => {
-    const currentIdx = tutorialSeries.findIndex(i => i.href === currentHref);
     // Only unlock the current and previous tutorials, and the next one if allDone
-let isUnlocked = completedTutorials.includes(item.href) || idx === 0;
-if (completedTutorials.includes(tutorialSeries[idx - 1]?.href)) isUnlocked = true;
-if (currentHref === item.href) isUnlocked = true;
+    let isUnlocked = completedTutorials.includes(item.href) || idx === 0;
+    if (completedTutorials.includes(tutorialSeries[idx - 1]?.href)) isUnlocked = true;
+    if (currentHref === item.href) isUnlocked = true;
     const isCurrent = currentHref === item.href;
 
     if (isUnlocked) {

@@ -1,0 +1,4 @@
+#!/bin/bash
+# filepath: ./remove-stream-consumers-import.sh
+
+find . -type f -name "*.tsx" -exec sed -i '' '/import { text } from "stream\/consumers";/d' {} +

@@ -3,8 +3,6 @@
  import TutorialSection from "@/components/TutorialSection";
  import { tutorialSeries, tutorialSeriesName } from "../tutorialSeries";
  import type { ChecklistItem } from "@/components/TutorialSection";
- import DownloadLink from "@/components/DownloadLink";
- import { text } from "stream/consumers";
  
  const checklist: ChecklistItem[] = [
    {
@@ -53,7 +51,7 @@
 
  ];
  
- export default function EndlessRunnerPage() {
+ export default function LanesPage() {
  
    const pathname = usePathname();
    return (

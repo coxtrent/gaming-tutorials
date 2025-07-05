@@ -15,7 +15,8 @@ function handleGrayHover(e: React.MouseEvent<HTMLElement>, isHover: boolean) {
   }
 }
 
-export const greetings: string[] = [
+
+const greetings: string[] = [
   "what's the good word, ${name}?",
   "top of the morning to ya, ${name}!",
   "yo ${name}, ready to roll?",
@@ -213,14 +214,12 @@ export const greetings: string[] = [
   "let’s make today count, ${name}."
 ];
 
-
 export default function Home() {
   const [name, setName] = useState<string | null>(null);
   const [showNameModal, setShowNameModal] = useState(false);
   const [inputName, setInputName] = useState("");
   const [displayedGreeting, setDisplayedGreeting] = useState("");
   const [showCursor, setShowCursor] = useState(true);
-  const [chosenGreeting, setChosenGreeting] = useState<string | null>(null);
 
 useEffect(() => {
   const storedName = localStorage.getItem("genius_name");
@@ -234,8 +233,6 @@ useEffect(() => {
 useEffect(() => {
   if (!name) return;
   // Only pick a new greeting if one hasn't been chosen yet or if the name changed
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)].replace(/\$\{name\}/g, name);
-  setChosenGreeting(greeting);
   setDisplayedGreeting("");
 }, [name]);
 

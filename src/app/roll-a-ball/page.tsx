@@ -53,7 +53,7 @@ export default function RollABallPage() {
             >
                 <h2>Roll-a-ball Tutorial</h2>
                 <p>
-                    The Roll-a-ball tutorial is part of Unity's official website.
+                    The Roll-a-ball tutorial is part of Unity&apos;s official website.
                     Would you like to go there now?
                 </p>
                 <div style={{ marginTop: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -94,7 +94,7 @@ export default function RollABallPage() {
                             cursor: 'pointer',
                         }}
                     >
-                        I finished Roll-a-ball and I'm ready to move on
+                        I finished Roll-a-ball and I&apos;m ready to move on
                     </button>
                 </div>
             </div>

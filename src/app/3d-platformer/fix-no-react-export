@@ -1,0 +1,55 @@
+#!/bin/bash
+# filepath: ./fix-no-react-export
+
+# Helper: convert kebab-case or snake_case or space to CamelCase
+to_camel_case() {
+  local input="$1"
+  # Replace - and _ with space, then capitalize each word, then remove spaces
+  echo "$input" | sed -E 's/[-_]/ /g' | awk '{for(i=1;i<=NF;i++){ $i=toupper(substr($i,1,1)) substr($i,2) }}1' | tr -d ' '
+}
+
+for dir in */ ; do
+  # Remove trailing slash
+  dir=${dir%/}
+  # Skip if not a directory
+  [ -d "$dir" ] || continue
+
+  topic_camel=$(to_camel_case "$dir")
+  
+  page_file="$dir/page.tsx"
+parent_human="$1"
+
+    cat > "$page_file" <<EOF
+"use client"
+import { usePathname } from "next/navigation";
+import TutorialSection from "@/components/TutorialSection";
+import { tutorialSeries, tutorialSeriesName } from "../tutorialSeries";
+import type { ChecklistItem } from "@/components/TutorialSection";
+import DownloadLink from "@/components/DownloadLink";
+import { text } from "stream/consumers";
+
+const checklist: ChecklistItem[] = [
+  {
+    text: "This one's coming soon.",
+  },
+];
+
+export default function ${topic_camel}Page() {
+
+  const pathname = usePathname();
+  return (
+    <main>
+      <h1>${parent_human} Guided Tutorials Video Series</h1>
+      <TutorialSection
+        videoSrc=""
+        checklist={checklist}
+        tutorialSeries={tutorialSeries}
+        currentHref={pathname}
+        storageKey={tutorialSeriesName}
+      />
+    </main>
+  );
+}
+EOF
+
+done
