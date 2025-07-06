@@ -6,7 +6,7 @@ import type { ChecklistItem } from "@/components/TutorialSection";
 
 const checklist: ChecklistItem[] = [
   {
-    text: "This one's coming soon.",
+    text: "Tutorial under construction. Check back soon.",
   },
 ];
 

@@ -158,10 +158,30 @@ useEffect(() => {
           flex: 1,
           maxWidth: "100%",
         }}>
-      <video controls width="100%" style={{ display: "block", margin: "2em 0" }}>
+      {videoSrc && videoSrc.trim() !== "" ? (
+        <video 
+      controls 
+      width="100%" 
+      style={{ display: "block", margin: "2em 0" }}
+      poster="/video-poster.png">
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video>) : (
+    <div
+      style={{
+        margin: "2em 0",
+        padding: "1.5em",
+        background: "#fffbe6",
+        border: "1px solid #ffe58f",
+        borderRadius: 8,
+        color: "#ad8b00",
+        fontWeight: "bold",
+        textAlign: "center",
+      }}
+    >
+      No video for this page. Follow instructions below.
+    </div>
+      )}
       <ol style={{ margin: "2em 0", paddingRight: "4em"}}>
         {checklist.map((item, idx) => (
           <li key={idx} style={{ marginBottom: "1.5em", fontStyle: "bold" }}><input 
