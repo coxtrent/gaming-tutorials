@@ -22,11 +22,10 @@ export default function RollABallPage() {
 
     const handleFinished = () => {
         // You can customize this action as needed
-        alert('Congratulations on finishing Roll-a-ball!');
-        router.push('/');
+        router.push('/for-everyone');
     };
 
-    if (!open) return null;
+    if (open) {
 
     return (
         <div
@@ -96,8 +95,35 @@ export default function RollABallPage() {
                     >
                         I finished Roll-a-ball and I&apos;m ready to move on
                     </button>
-                </div>
+                </div>            
             </div>
         </div>
+    );}
+
+        // After modal closes, show a single button to go home
+    return (
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+        }}>
+            <button
+                onClick={handleBackHome}
+                style={{
+                    padding: '14px 32px',
+                    background: '#222c37',
+                    color: '#fff',
+                    border: 'none',
+                    borderRadius: 6,
+                    fontSize: 20,
+                    cursor: 'pointer',
+                }}
+            >
+                Back to homepage
+            </button>
+        </div>
     );
+    
+    
 }
