@@ -107,7 +107,7 @@ export default function RollABallPage() {
             justifyContent: 'center',
             alignItems: 'center',
             height: '100vh',
-        }}>
+        }}><p>Hidden Genius Project Gaming Tutorials</p>
             <button
                 onClick={handleBackHome}
                 style={{
