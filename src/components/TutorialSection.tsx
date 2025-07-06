@@ -16,6 +16,7 @@ export type ChecklistItem = {
   text: string;
   code?: string; // Optional code block for this step
   downloads?: { href: string; label: string;  }[]; // Optional links for this step
+  links?: { href: string; label: string; }[]; // Optional links for this step
 };
 
 export type TutorialSectionProps = {
