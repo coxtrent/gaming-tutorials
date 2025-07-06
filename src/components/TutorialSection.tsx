@@ -258,6 +258,46 @@ useEffect(() => {
                 </pre>
               </div>
             )}
+            {item.links && (
+              <div style={{ marginTop: "0.5em", display: "flex", flexWrap: "wrap", gap: "0.5em" }}>
+                {item.links.map((dl, i) => (
+                  <a
+                    key={i}
+                    href={dl.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      marginRight: "1em",
+                      padding: "0.3em 0.7em",
+                      background: "#e0e7ff",
+                      borderRadius: "4px",
+                      color: "#3730a3",
+                      textDecoration: "none",
+                      fontWeight: "bold",
+                      transition: "background 0.2s, color 0.2s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = "#c7d2fe";
+                      e.currentTarget.style.color = "#1e40af";
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = "#e0e7ff";
+                      e.currentTarget.style.color = "#3730a3";
+                    }}
+                  ><Image 
+                      src="/globe.svg"
+                      alt={dl.label}
+                      width={20}
+                      height={20}
+                      style={{ verticalAlign: "middle", marginRight: "0.5em" }}
+                    />
+                    {dl.label}
+                  </a>
+                ))}
+              </div>
+            )}
           </li>
         ))}
       </ol>
