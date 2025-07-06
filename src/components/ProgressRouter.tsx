@@ -13,7 +13,7 @@ export default function GenericTutorialRouter({ storageKey, tutorialSeries }: Ge
   useEffect(() => {
     let lastHref = undefined;
     if (typeof window !== "undefined") {
-      lastHref = localStorage.getItem(storageKey);
+      lastHref = localStorage.getItem(`${storageKey}LastHref`);
     }
     const targetHref =
       lastHref && tutorialSeries.some(t => t.href === lastHref)
