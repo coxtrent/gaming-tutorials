@@ -361,7 +361,7 @@ useEffect(() => {
           />
         </a>
         <a
-          href="/1st-person"
+          href="/first-person"
           className="nav-btn"
           style={{ position: "relative", display: "inline-block", transition: "filter 0.3s ease-in-out" }}
           onMouseEnter={e => handleGrayHover(e, true)}

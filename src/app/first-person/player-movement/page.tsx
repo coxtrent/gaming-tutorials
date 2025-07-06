@@ -28,14 +28,14 @@
 
  ];
  
- export default function PlayerControllerPage() {
+ export default function EndlessRunnerPage() {
  
    const pathname = usePathname();
    return (
      <main>
-       <h1>First Person Guided Tutorials Video Series</h1>
+       <h1>1st Person Guided Tutorials Video Series</h1>
        <TutorialSection
-         videoSrc="/First-Person-Tutorials/2PlayerController.mp4"
+         videoSrc="/1st-Person-Tutorials/2PlayerController.mp4"
          checklist={checklist}
          tutorialSeries={tutorialSeries}
          currentHref={pathname}
