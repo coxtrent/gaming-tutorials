@@ -2,14 +2,18 @@
 // This component displays a warning for mobile users to use a desktop or rotate their device to landscape
 import React, { useEffect, useState } from "react";
 
+function isMobileDevice() {
+  if (typeof navigator === "undefined") return false;
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
 export default function MobileWarning() {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     function check() {
-      const isMobile = window.innerWidth <= 800;
-      const isPortrait = window.innerHeight > window.innerWidth;
-      setShow(isMobile && isPortrait);
+      const isMobile = isMobileDevice();
+      setShow(isMobile);
     }
     check();
     window.addEventListener("resize", check);

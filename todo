@@ -1,7 +1,27 @@
-echo "TODO:\n
-• remake and upload jump tutorial\n
-• make & upload pausemenu tutorial\n
-• extend endless-runner tutorials\n
-• ask team for other tutorials\n
+echo "TODO:
+• remake and upload jump tutorial
+• make & upload general tutorial
+    • audio
+    • level design
+    • game design
+    • game loop
+    • pause menu
+    • main menu
+    • settings menu
+    • save and load game
+    • sharp basics
+    • UI basics
+    • adding graphics
+• extend endless-runner tutorials
+    • make tilting level tutorial
+    • make game end logic tutorial
+    • make pickup item tutorial
+    • make pickups tutorial
+    • make obstacle tutorial
+• extend 3d platformer tutorials
+    • make jump tutorial
+    • make change character tutorial
+    • make adjust enemy tutorial
+• ask team for other tutorials
 "
 
