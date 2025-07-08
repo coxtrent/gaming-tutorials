@@ -13,8 +13,9 @@ const checklist: ChecklistItem[] = [
   { text: "In your new project, in the File Explorer area (Project tab), Ctrl+Click > Create > Folder. Name it 'Scripts'." },
   {text: "Drag the downloaded scripts into the 'Scripts' folder.",},
   { text: "In the Hierarchy tab, control-click > Create > 3D Object > Pick a shape. I used a Sphere. Name it 'Player'." },
-  { text: "In the Inspector tab, click 'Add Component' and add a 'Rigidbody' component. Freeze X Position, Freeze X and Z Rotation." },
-    { text: "With the Player object still selected in the Hierarchy, look at the Inspector tab. Click 'Add Component' and add the 'PlayerController' script." },    { text: "In the Hierarchy section, add a ground - make it a cube. Name it 'Ground'." },
+  { text: "Make sure \"Player\" is selected in the Hierarchy. Now, in the Inspector tab, click 'Add Component' and add a 'Rigidbody' component. Inside the Rigidbody component, open the \"Constraints\" dropdown. Freeze X Position, Freeze X and Z Rotation." },
+    { text: "With the Player object still selected in the Hierarchy, look at the Inspector tab. Click 'Add Component' and add the 'PlayerController' script." },    
+    { text: "In the Hierarchy section, add a ground - make it a cube. Name it 'Ground'." },
     { text: "Select the ground in the Hierarchy. Then, in the Inspector tab, create a new layer for the ground by clicking the \"Layer\" dropdown menu, clicking \"Add Layer\", and choose an unused layer. Name it 'Ground'." },    
     { text: "In the Inspector tab, set the 'Scale' of the Ground object to X=10, Y=1, Z=40." },
     { text: "With Ground still selected in the Hierarchy, in the Inspector tab, go back to the \"Layer\" dropdown menu and set the layer of the Ground object to 'Ground'." },
@@ -47,3 +48,7 @@ private int currentLane = 1; // 0 = left, 1 = center, 2 = right
 private int numLanes = 3;
 public float laneChangeSpeed = 10f;`,
   }*/
+
+
+
+
