@@ -6,26 +6,8 @@
  
  const checklist: ChecklistItem[] = [
    {
-     text: "Watch this video to learn about setting up the camera in 1st person mode..",
-            
-   }
-     /*  <ol>
-        <li><label><input type="checkbox">Add this code to the PlayerController script directly under <code>public LayerMask groundLayer;</code>:
-                <div style="position: relative;">
-    <button onclick="copyCode(this)" style="position: absolute; top: 0; right: 0; z-index: 2;">Copy</button><pre class="language-csharp"><code>
-
-        </label></li>
-        <li><label><input type="checkbox">Add this code to the PlayerController script directly under <code>void Update(){</code>:
-                <div style="position: relative;">
-    <button onclick="copyCode(this)" style="position: absolute; top: 0; right: 0; z-index: 2;">Copy</button><pre class="language-csharp"> <code></code></pre></div>
-        </label></li>
-        <li><label><input type="checkbox"></code>:
-            <div style="position: relative;">
-    <button onclick="copyCode(this)" style="position: absolute; top: 0; right: 0; z-index: 2;">Copy</button><pre class="language-csharp"><code>
-</code></pre></div>
-        </label></li>
-    </ol>*/
-
+     text: "Watch this video to learn about setting up the camera in 1st person mode..",       
+   },
  ];
  
  export default function EndlessRunnerPage() {

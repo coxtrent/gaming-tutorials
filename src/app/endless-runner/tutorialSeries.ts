@@ -3,6 +3,7 @@ export const tutorialSeries = [
   { label: "Lanes", href: "/endless-runner/lanes" },
   { label: "Terrain Recycling", href: "/endless-runner/terrain-recycling" },
   { label: "Score", href: "/endless-runner/score" },
+  { label: "Powerups", href: "/endless-runner/powerups" },
   { label: "Obstacles", href: "/endless-runner/obstacles" },
 ];
 

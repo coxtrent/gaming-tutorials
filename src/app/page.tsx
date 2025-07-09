@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import LockedOverlay from "@/components/LockedOverlay"; // place lock overlay above tag for tutorial text
+//import LockedOverlay from "@/components/LockedOverlay"; // place lock overlay above tag for tutorial text
 
 function handleGrayHover(e: React.MouseEvent<HTMLElement>, isHover: boolean) {
   const img = e.currentTarget.querySelector("img") || e.currentTarget.querySelector("span > img");
@@ -142,7 +142,7 @@ const greetings: string[] = [
   // --- techie ---
   "system online—welcome, ${name}.",
   "hey ${name}, ready to commit some greatness?",
-  "let’s compile that genius, ${name}.",
+  "${name} is goated. this ain't even glaze btw",
   "you running on max efficiency today, ${name}?",
   "no bugs, just brilliance—let’s go ${name}!",
   "syntax lookin’ clean, ${name}.",
@@ -411,7 +411,7 @@ useEffect(() => {
           onMouseEnter={e => handleGrayHover(e, true)}
           onMouseLeave={e => handleGrayHover(e, false)}
         >
-          <Image
+{/*        <Image 
             src="/tds.jpg"
             alt="Top-Down Shooter"
             width={600}
@@ -423,7 +423,7 @@ useEffect(() => {
               borderRadius: "16px",
             }}
           />
-            {/* Lock overlay */}
+             Lock overlay 
 <LockedOverlay />
           <div
             style={{
@@ -443,7 +443,7 @@ useEffect(() => {
             Top-Down
             <br />
             Shooter
-          </div>
+          </div>*/}
         </div>
       </div>
       <a
@@ -465,7 +465,6 @@ useEffect(() => {
             borderRadius: "16px",
           }}
         />
-        <LockedOverlay />
         <div
           style={{
             position: "absolute",

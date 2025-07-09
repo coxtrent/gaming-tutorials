@@ -9,7 +9,6 @@ function isMobileDevice() {
 
 export default function MobileWarning() {
   const [show, setShow] = useState(false);
-
   useEffect(() => {
     function check() {
       const isMobile = isMobileDevice();
