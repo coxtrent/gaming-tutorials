@@ -10,7 +10,7 @@
      code:`    public float laneOffset = 4f; // Distance between lanes
     private int currentLane = 1; // 0 = left, 1 = center, 2 = right
     private int numLanes = 3;
-    public float laneChangeSpeed = 10f;</code></pre></div>`
+    public float laneChangeSpeed = 10f;`
    },
    {text: "Add this code to the PlayerController script directly under the line with \"void Update()\":",
     code: `       // Keyboard input for lane change (can be replaced with touch/swipe)
